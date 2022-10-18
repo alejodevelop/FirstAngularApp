@@ -1,0 +1,25 @@
+<p>tetera works!</p>
+<span>{{teteras}}</span>
+
+<form (submit)="addTetera(newTetera)">
+    <input type="text" #newTetera>
+    <button>
+        Agregar tipo de tetera
+    </button>
+</form>
+
+<hr>
+<button (click)="handleActivado()">activar-desactivar: {{activado}}</button>
+<ul *ngIf="activado">
+    <li *ngFor="let tetera of teteras">
+        <app-user [nombreTetera]="tetera"></app-user>
+    </li>
+</ul>
+
+<div>
+
+    <form></form>
+    <input type="text" [(ngModel)]="color">
+    color: {{color}}
+</div>
+
